@@ -1,9 +1,9 @@
 0) Create a project folder example "python-course" this folder is also called as root folder or
    root directory.
 1) Create virtual environment using command:
-   python -m venv venv
+   ```bash python -m venv venv```
 2) Activate virtual environment using command:
-   venv/scripts/activate
+   ```bash venv/scripts/activate```
 3) Create a file called  requirements.txt in root folder and write all dependencies you need.
    Dependencies are extra libraries that you want to use in your code but they are
    not available in python by default.
@@ -14,7 +14,7 @@
    pydantic
    pydantic-settings
    python-dotenv
-   Install all requirements  using command : "pip install -r requirements.txt"
+   Install all requirements  using command : ```bash pip install -r requirements.txt```
 
 4) Create a file called .env in root of your project. 
    Root means directly inside your main project folder. 
@@ -22,7 +22,8 @@
    Environment variables are the secret values which you dont  want  to directly 
    in your code. 
    Example 
-   APP_NAME=My Python Project
+   ```python
+   APP_NAME=My Python Project```
 
 5) Create a file named as config.py inside your root folder. Again root means
    directly inside  main project folder.
@@ -57,7 +58,7 @@ settings = Settings()
    from config import settings
    print(settings.APP_NAME)
    ```
-   Then run this code using comamnd "python main.py" in terminal.
+   Then run this code using comamnd ```bash python main.py``` in terminal.
    you will see output : My Python Project
 
 
