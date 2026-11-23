@@ -1,7 +1,13 @@
-# Class Student is created with variables :
-# name and age
 
 class Student:
     name:str
-    age:int
+    def set_name(self,NAME):
+        self.name=NAME
+    def get_name(self):
+        return self.name
+        
 
+student=Student()
+student.set_name("saad")
+name=student.get_name()
+print(name)
