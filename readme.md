@@ -1,8 +1,8 @@
 0) Create a project folder example "python-course" this folder is also called as root folder or
    root directory.
-1) Create virtual environment
+1) Create virtual environment using command:
    python -m venv venv
-2) Activate virtual environment
+2) Activate virtual environment using command:
    venv/scripts/activate
 3) Create a file called  requirements.txt in root folder and write all dependencies you need.
    Dependencies are extra libraries that you want to use in your code but they are
@@ -14,7 +14,7 @@
    pydantic
    pydantic-settings
    python-dotenv
-   Install all requirements  using command "pip install -r requirements.txt"
+   Install all requirements  using command : "pip install -r requirements.txt"
 
 4) Create a file called .env in root of your project. 
    Root means directly inside your main project folder. 
@@ -39,7 +39,7 @@
 
    settings = Settings()
 
-   
+
    The purpose of config.py is to load environment variables into "settings"
    object in our case so that we can
    use them inside your code using "settings.VARIABLE_NAME"
