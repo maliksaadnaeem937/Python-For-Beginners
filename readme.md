@@ -51,10 +51,12 @@ settings = Settings()
    object in our case so that we can
    use them inside your code using "settings.VARIABLE_NAME"
 
-6) Create a file named as main.py inside your root folder.
+6) Create a file named as main.py inside your root folder
    and write :
-   ```from config import settings
-   print(settings.APP_NAME)```
+   ```python
+   from config import settings
+   print(settings.APP_NAME)
+   ```
    Then run this code using comamnd "python main.py" in terminal.
    you will see output : My Python Project
 
