@@ -1,9 +1,9 @@
 
-from pydantic import BaseModel
+from pydantic import BaseModel,Field
 
 class Student(BaseModel):
-    name: str
-    age: int
+    name: str=Field(...)
+    age: int=Field(...)
 
 student = Student(name="Saad", age=22)
 

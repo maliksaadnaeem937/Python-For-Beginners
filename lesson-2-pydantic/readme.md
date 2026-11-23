@@ -58,11 +58,11 @@ pip install pydantic
 First, import `BaseModel` from Pydantic.
 
 ```python
-from pydantic import BaseModel
+from pydantic import BaseModel,Field
 
 class Student(BaseModel):
-    name: str
-    age: int
+    name: str = Field(...)
+    age: int = Field(...)
 ```
 
 ### Creating an Object
