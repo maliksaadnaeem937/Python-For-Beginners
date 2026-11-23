@@ -147,7 +147,7 @@ Students will use this blueprint to write the Pydantic model themselves.
 |---|---|---|---|
 | name | String | Required | Minimum 3, maximum 50 characters |
 | age | Integer | Required | Between 16 and 60 |
-| email | Email | Required | Valid email address |
+| email | Email | Required | String |
 | cgpa | Float | Required | Between 0.0 and 4.0 |
 | phone | String | Optional | Default: "Not Provided" |
 | is_active | Boolean | Optional | Default: True |
