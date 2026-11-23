@@ -28,16 +28,23 @@
    directly inside  main project folder.
    Write this code inside in config.py:
 
-   from pydantic_settings import BaseSettings, SettingsConfigDict
-   class Settings(BaseSettings):
-      APP_NAME: str
-      model_config = SettingsConfigDict(
-         env_file=".env",
-         env_file_encoding="utf-8",
-         extra="ignore"
-      )
+   
+```python
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
-   settings = Settings()
+
+class Settings(BaseSettings):
+    APP_NAME: str
+
+    model_config = SettingsConfigDict(
+        env_file=".env",
+        env_file_encoding="utf-8",
+        extra="ignore"
+    )
+
+
+settings = Settings()
+```
 
 
    The purpose of config.py is to load environment variables into "settings"
@@ -46,8 +53,8 @@
 
 6) Create a file named as main.py inside your root folder.
    and write :
-   from config import settings
-   print(settings.APP_NAME)
+   ```from config import settings
+   print(settings.APP_NAME)```
    Then run this code using comamnd "python main.py" in terminal.
    you will see output : My Python Project
 
