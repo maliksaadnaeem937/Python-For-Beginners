@@ -1,67 +1,54 @@
-# Python for Beginners 🐍
+0) Create a project folder example "python-course" this folder is also called as root folder or
+   root directory.
+1) Create virtual environment
+   python -m venv venv
+2) Activate virtual environment
+   venv/scripts/activate
+3) Create a file called  requirements.txt in root folder and write all dependencies you need.
+   Dependencies are extra libraries that you want to use in your code but they are
+   not available in python by default.
+   So you have to install them on your own. Like to perform array operations you need
+   library called "numpy".
+   Libraries provide builtin functions that makes it simpler for you to write code.
+   Example:
+   pydantic
+   pydantic-settings
+   python-dotenv
+   Install all requirements  using command "pip install -r requirements.txt"
 
-A beginner-friendly repository documenting my journey of learning Python from scratch.
+4) Create a file called .env in root of your project. 
+   Root means directly inside your main project folder. 
+   Write environment variables inside it.
+   Environment variables are the secret values which you dont  want  to directly 
+   in your code. 
+   Example 
+   APP_NAME=My Python Project
 
-This repository contains practical examples, code exercises, notes, and small projects covering fundamental Python concepts.
+5) Create a file named as config.py inside your root folder. Again root means
+   directly inside  main project folder.
+   Write this code inside in config.py:
 
-## 📚 Topics Covered
+   from pydantic_settings import BaseSettings, SettingsConfigDict
+   class Settings(BaseSettings):
+      APP_NAME: str
+      model_config = SettingsConfigDict(
+         env_file=".env",
+         env_file_encoding="utf-8",
+         extra="ignore"
+      )
 
-- Python Introduction and Setup
-- Variables and Data Types
-- Operators
-- Conditional Statements (`if`, `elif`, `else`)
-- Loops (`for`, `while`)
-- Functions
-- Lists, Tuples, Sets, and Dictionaries
-- Strings and String Methods
-- Object-Oriented Programming (OOP)
-- Exception Handling
-- File Handling
-- Modules and Packages
+   settings = Settings()
 
-*Topics will be added as I progress through the course.*
+   
+   The purpose of config.py is to load environment variables into "settings"
+   object in our case so that we can
+   use them inside your code using "settings.VARIABLE_NAME"
 
-## 📁 Repository Structure
+6) Create a file named as main.py inside your root folder.
+   and write :
+   from config import settings
+   print(settings.APP_NAME)
+   Then run this code using comamnd "python main.py" in terminal.
+   you will see output : My Python Project
 
-```text
-Python-For-Beginners/
-│
-├── lesson-1/
-│   └── ...
-│
-├── main.py
-├── setup.md
-└── README.md
-```
 
-## ⚙️ Getting Started
-
-1. Clone the repository:
-
-   ```bash
-   git clone git@github.com:maliksaadnaeem937/Python-For-Beginners.git
-   ```
-
-2. Navigate to the project directory:
-
-   ```bash
-   cd Python-For-Beginners
-   ```
-
-3. Run a Python file:
-
-   ```bash
-   python main.py
-   ```
-
-## 🎯 Goal
-
-Build a strong foundation in Python programming through consistent practice, hands-on coding, and practical examples.
-
-## 🤝 Contributions
-
-Suggestions, improvements, and beginner-friendly examples are welcome!
-
----
-
-**Learning Python, one lesson at a time.** 🚀
