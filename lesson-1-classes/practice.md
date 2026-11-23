@@ -2,7 +2,9 @@
 
 Try to solve these problems yourself without looking at the solutions.
 
-## Problem 1: Student Class
+## Part 1: Practical Questions
+
+### Problem 1: Student Class
 
 Create a class called `Student`.
 
@@ -18,7 +20,7 @@ Create a class called `Student`.
 Saad
 ```
 
-## Problem 2: Employee Class
+### Problem 2: Employee Class
 
 Create a class called `Employee`.
 
@@ -36,7 +38,7 @@ Name: Ali
 Salary: 50000
 ```
 
-## Problem 3: Bank Account Class
+### Problem 3: Bank Account Class
 
 Create a class called `BankAccount`.
 
@@ -54,7 +56,7 @@ Create a class called `BankAccount`.
 Final Balance: 1500
 ```
 
-## Problem 4: Rectangle Class
+### Problem 4: Rectangle Class
 
 Create a class called `Rectangle`.
 
@@ -65,7 +67,7 @@ Create a class called `Rectangle`.
 - Create an object and set length to `10` and width to `5`.
 - Print the area.
 
-Formula:
+**Formula:**
 
 ```text
 Area = Length × Width
@@ -77,7 +79,7 @@ Area = Length × Width
 Area: 50
 ```
 
-## Problem 5: Car Class
+### Problem 5: Car Class
 
 Create a class called `Car`.
 
@@ -102,6 +104,85 @@ Speed: 60
 
 ---
 
+## Part 2: Theoretical Questions
+
+### Question 1: What are Objects?
+
+Answer the following:
+
+1. What are objects in Python?
+2. Do objects occupy memory?
+3. What do objects contain?
+4. Why do we use objects?
+
+### Question 2: What are Classes?
+
+Answer the following:
+
+1. What is a class in Python?
+2. Why do we create classes?
+3. Is a class an object or a blueprint for creating objects?
+4. What happens when we create an object from a class?
+
+### Question 3: What are Variables and Methods Inside Objects?
+
+Answer the following:
+
+1. What are variables inside objects used for?
+2. What are methods inside objects?
+3. What is the difference between a variable and a method?
+4. Can methods access variables inside objects?
+
+### Question 4: What are Getters and Setters?
+
+Answer the following:
+
+1. What is a setter method?
+2. What is a getter method?
+3. Why do we use setter methods?
+4. Why do we use getter methods?
+5. What is the difference between `set_name()` and `get_name()`?
+
+### Question 5: What is `self` in Python?
+
+Answer the following:
+
+1. What is `self`?
+2. Why do we use `self` inside class methods?
+3. What does `self.name` mean?
+4. What is the difference between `name` and `self.name`?
+5. Does `self` refer to the current object?
+
+---
+
+## Part 3: Interview-Based Questions
+
+### Question 1
+
+What is the difference between a class and an object?
+
+### Question 2
+
+What is the difference between a method and a function?
+
+### Question 3
+
+Can we create multiple objects from a single class?
+
+### Question 4
+
+What happens when we create an object using:
+
+```python
+student = Student()
+```
+
+### Question 5
+
+Why do we use `self` when defining methods inside a class?
+
+---
+
 ## Practice Rules
 
 1. Use classes to create all five problems.
@@ -110,5 +191,8 @@ Speed: 60
 4. Use getter methods to access values.
 5. Use `self` to access variables inside objects.
 6. Try to solve without copying examples.
+7. Try to answer theoretical questions in your own words.
 
-**Goal:** Understand how objects store values and how methods are used to set, get, and modify those values.
+## Goal
+
+Understand how objects store values and how methods are used to set, get, and modify those values. Also understand how classes define the structure of objects and how we create objects from classes.
