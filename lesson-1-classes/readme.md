@@ -1,12 +1,77 @@
-# Python Classes and Objects
+# Understanding Classes and Objects in Python
 
-## What is a Class?
+## 1. What are Objects?
 
-A class is like a blueprint that we use to create objects.
+The real things are objects.
 
-For example, a `Student` class can be used to create different student objects. Each student can have their own name and other information.
+Objects occupy memory, and objects are useful.
 
-## Example
+Objects have variables and methods in them.
+
+Inside objects, we have variables and methods.
+
+Variables inside objects are used to store values, and methods inside objects are used to perform operations.
+
+## 2. How Do We Access Variables Inside Objects?
+
+We can access the variables inside objects using methods.
+
+Suppose we have an object with a variable called `name`.
+
+Now we want to give a value to this variable `name`, which is inside the object.
+
+We will use a method to give or set the value to the variable `name`.
+
+This method will be called a **Setter**.
+
+Setters are the methods used to give values to variables inside an object.
+
+## 3. What are Getters?
+
+Now let's suppose the `name` variable has some value (`"saad"`) which we gave using the setter method.
+
+Now we want to access or get the value of the `name` variable.
+
+For this, we can use another method called `get_name()` to get the value of the variable.
+
+This method is called a **Getter**.
+
+Getters are the methods used to get or access the values of variables inside an object.
+
+## 4. What Do Objects Contain?
+
+So, inside objects, we have variables that store values and methods.
+
+Methods are used either to set the values of variables that are inside the object or to get the values of variables inside the object.
+
+- Variables store values inside objects.
+- Setter methods are used to give values to variables inside objects.
+- Getter methods are used to get values from variables inside objects.
+
+## 5. How Do We Create Objects?
+
+Now the question is, how do we create objects?
+
+To create objects, we define classes.
+
+When we write a class, inside it we define the structure of how our object will look.
+
+For example, in this case, we can create a class called `Student` with:
+
+- A variable called `name`.
+- Two methods called `get_name()` and `set_name()`.
+
+These two methods will be used to set and get the value of the variable `name`.
+
+Then we can create an object from this class.
+
+The object will now have the variables and methods that we defined in the class.
+
+We don't access the variables of the class directly. First, we create objects of the class, then give values to the variables inside the objects, and then access those values.
+
+---
+
+## 6. Code Example
 
 ```python
 class Student:
@@ -34,104 +99,15 @@ print(name)
 saad
 ```
 
-## Understanding the Code
+## 7. Understanding the Flow
 
-### 1. Creating a Class
+1. We create a class called `Student`.
+2. Inside the class, we define a variable called `name`.
+3. We define a setter method called `set_name()` to give a value to the `name` variable.
+4. We define a getter method called `get_name()` to get the value of the `name` variable.
+5. We create an object called `student` from the `Student` class.
+6. We call `student.set_name("saad")` to set the value of the name variable.
+7. We call `student.get_name()` to get the value of the name variable.
+8. Finally, we print the value.
 
-```python
-class Student:
-```
-
-Here, we are creating a class named `Student`.
-
-This class will act as a blueprint for creating student objects.
-
-### 2. Declaring a Variable
-
-```python
-name: str
-```
-
-Here, we are declaring a variable named `name` with a type hint of `str`.
-
-It tells developers that the `name` variable is expected to contain a string.
-
-### 3. Creating a Method to Set the Name
-
-```python
-def set_name(self, NAME):
-    self.name = NAME
-```
-
-Here, we are creating a method named `set_name()`.
-
-- `self` refers to the current object.
-- `NAME` is the value that we receive as an argument.
-- `self.name = NAME` stores that value inside the object's `name` variable.
-
-### 4. Creating a Method to Get the Name
-
-```python
-def get_name(self):
-    return self.name
-```
-
-Here, we are creating another method named `get_name()`.
-
-It returns the value stored inside the object's `name` variable.
-
-### 5. Creating an Object
-
-```python
-student = Student()
-```
-
-Here, we are creating an object of the `Student` class.
-
-Now we can access the methods and variables of this class using the `student` object.
-
-### 6. Setting the Name
-
-```python
-student.set_name("saad")
-```
-
-Here, we are calling the `set_name()` method and passing `"saad"` as an argument.
-
-This will store `"saad"` inside `student.name`.
-
-### 7. Getting the Name
-
-```python
-name = student.get_name()
-```
-
-Here, we are calling the `get_name()` method.
-
-It returns the name stored inside the object, and we store that returned value inside the `name` variable.
-
-### 8. Printing the Name
-
-```python
-print(name)
-```
-
-Finally, we print the name stored inside the `name` variable.
-
-**Output:**
-
-```text
-saad
-```
-
-## Important Things to Remember
-
-- **Class:** A blueprint used to create objects.
-- **Object:** An instance of a class.
-- **Attribute:** A variable that belongs to an object, like `self.name`.
-- **Method:** A function defined inside a class.
-- **self:** Refers to the current object.
-- **set_name():** Used to store a name.
-- **get_name():** Used to retrieve a name.
-
-**In simple words:** A class helps us organize related variables and functions together. We create objects from a class and use those objects to access its variables and methods.
+**Remember:** Classes define the structure of objects. Objects contain variables and methods. Setter methods set values, and getter methods get values.
